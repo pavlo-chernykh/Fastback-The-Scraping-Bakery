@@ -40,12 +40,6 @@ $ npm run start:dev
 $ yarn start:dev
 ```
 
-## Installation
-
-```bash
-$ git clone <repository-url>
-```
-
 ## The API is now accessible at http://localhost:3000/.
 
 ## Usage (curl example here, but can use any other tool like Postman or Insomnia)
