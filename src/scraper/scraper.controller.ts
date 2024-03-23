@@ -11,8 +11,7 @@ export class ScraperController {
     @Query('productId') productId: string,
     @Query('processId') processId: string,
     @Res() res: Response
-  ): Promise<any> {
-    try {
+  ) {
       if (productId) {
         const processId = await this.scraperService.startScrapingProcess(productId);
         res.json({ processId });
@@ -22,8 +21,5 @@ export class ScraperController {
       } else {
         res.status(400).json({ error: 'Invalid request' });
       }
-    } catch (error) {
-      res.status(404).json({ error: error.message });
-    }
   }
 }
